@@ -1,0 +1,10 @@
+term.clear()
+term.setCursorPos(17,9)
+print("Set Username Below")
+term.setCursorPos(15,10)
+local answer = io.read()
+settings.unset("username")
+settings.set("username", answer)
+settings.save("username")
+shell.run("disk/menu.lua")
+
